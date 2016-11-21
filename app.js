@@ -5,6 +5,8 @@
 
 var host = process.env.OPENSHIFT_NODEJS_IP || "localhost";
 var port = process.env.OPENSHIFT_NODEJS_PORT || 80;
+var app_uuid = process.env.OPENSHIFT_APP_UUID;
+var gear_uuid = process.env.OPENSHIFT_GEAR_UUID; 
 
 console.log("Listen host environment set to " + host);
 console.log("Listen port environment set to " + port);
@@ -30,6 +32,8 @@ var httpServer = http.createServer(app);
 var data = {
         "count" : 3,
         "timestamp" : "00.00.0000 00:00 CET",
+        "gear_uuid" : "unknown",
+        "app_uuid" : "unknown",
         "pages" : [
                 {
                         "title" : "IT Production",
@@ -78,6 +82,8 @@ app.get('/data/1.json', function(req, res) {
         var mi = now.getMinutes();
         mi = mi - mi%12;
         data.timestamp = dd+'.'+mo+'.'+yyyy+' '+hh+':'+mi+' UTC';
+        data.app_uuid = app_uuid;
+        data.gear_uuid = gear_uuid;
         res.json(data);
 });
 
