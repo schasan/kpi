@@ -72,7 +72,7 @@ app.get('/data/1.json', function(req, res) {
         //res.send('i am a beautifull butterfly');
         var now = new Date();
         var dd = now.getDate();
-        var mo = now.getMonth();
+        var mo = now.getMonth()+1;
         var yyyy = now.getFullYear();
         var hh = now.getHours();
         var mi = now.getMinutes();
