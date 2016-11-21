@@ -5,8 +5,8 @@
 
 var host = process.env.OPENSHIFT_NODEJS_IP || "localhost";
 var port = process.env.OPENSHIFT_NODEJS_PORT || 80;
-var app_uuid = process.env.OPENSHIFT_APP_UUID || "undefined";
-var gear_uuid = process.env.OPENSHIFT_GEAR_UUID || "undefined"; 
+var app_uuid  = os.environ['OPENSHIFT_APP_UUID'] || "undefined";
+var gear_uuid = os.environ['OPENSHIFT_GEAR_UUID'] || "undefined"; 
 
 console.log("Listen host environment set to " + host);
 console.log("Listen port environment set to " + port);
