@@ -1,12 +1,13 @@
-{ "scripts":
-    { "start": "node app.js"
+{
+    "scripts": {
+        "start": "node app.js"
     },
-  "dependencies":
-    { "express" : "latest",
-      "http" : "latest"
+    "dependencies": {
+        "express" : "latest",
+        "os" : "latest",
+        "http" : "latest"
     },
-  "config":
-    {
-      "port" : "8080"
+    "config": {
+        "port" : "8080"
     }
 }
