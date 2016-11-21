@@ -77,7 +77,7 @@ app.get('/data/1.json', function(req, res) {
         var hh = now.getHours();
         var mi = now.getMinutes();
         mi = mi - mi%12;
-        data.timestamp = dd+'.'+mo+'.'+yyyy+' '+hh+':'+mi+' CET';
+        data.timestamp = dd+'.'+mo+'.'+yyyy+' '+hh+':'+mi+' UTC';
         res.json(data);
 });
 
