@@ -82,7 +82,7 @@ app.get('/data/1.json', function(req, res) {
         var yyyy = now.getFullYear();
         var hh = now.getHours();
         var mi = now.getMinutes();
-        mi = mi - mi%5;
+        mi = mi - mi%6;
         data.timestamp = dd+'.'+mo+'.'+yyyy+' '+hh+':'+mi+' UTC';
         data.app_uuid = app_uuid;
         data.gear_uuid = gear_uuid;
